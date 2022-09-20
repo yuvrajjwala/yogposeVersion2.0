@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="login.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>Login|SignUp|Yogpose</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  <script src="login.js"></script>
+  
+  </head>
+<body>
+
+
+
+
+  
+  <div class="mynavbar" id="nav1">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">YOGPOSE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <style>
+            .navbar-toggler{
+              border: none;
+            }
+            .navbar-toggler:hover{
+              box-shadow: none;
+              border: none;
+            }
+          </style>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Learn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="room.html">Room</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+      
+
+  </div>
+
+  
+  <div class="imglogin"></div>
+  <body  class="align">
+
+    <div id="loginform" class="grid">
+  
+      <form  class="form login" onsubmit="login()">
+        <h1 style="text-align: center;">LOGIN</h1>
+        <div class="form__field">
+          
+          <label for="login__username"><svg class="icon">
+              <use xlink:href="#icon-user"></use>
+            </svg><span class="hidden">Username</span></label>
+          <input  autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
+        </div>
+  
+        <div class="form__field">
+          <label for="login__password"><svg class="icon">
+              <use xlink:href="#icon-lock"></use>
+            </svg><span class="hidden">Password</span></label>
+          <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
+        </div>
+  
+        <div class="form__field">
+          <input type="submit" value="Login">
+        </div>
+  
+      </form>
+      <br>
+  
+      <p class="text--center" style="color: white;">Not a member? <button style="background:transparent;border:none" onClick="opensinup()"><a style="text-decoration: none;color:#a1a1a1;" >Sign up now</a></button> <svg class="icon">
+          
+        </svg></p>
+  
+    </div>
+  
+    <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+      <symbol id="icon-arrow-right" viewBox="0 0 1792 1792">
+        <path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H245q-52 0-84.5-37.5T128 1024V896q0-53 32.5-90.5T245 768h704L656 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 1792 1792">
+        <path d="M640 768h512V576q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28H416q-40 0-68-28t-28-68V864q0-40 28-68t68-28h32V576q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z" />
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 1792 1792">
+        <path d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z" />
+      </symbol>
+    </svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <body class="align">
+
+    <div id="SignUpform"  class="grid">
+  
+      <form   class="form login" onsubmit="login()">
+        <h1 style="text-align: center;">SIGN UP</h1>
+        
+         <div class="form__field">
+          
+          <label for="login__username"><svg class="icon">
+              <use xlink:href="#icon-user"></use>
+            </svg><span class="hidden">Username</span></label>
+          <input  autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="First Name" required>
+        </div>
+         <div class="form__field">
+          
+          <label for="login__username"><svg class="icon">
+              <use xlink:href="#icon-user"></use>
+            </svg><span class="hidden">Username</span></label>
+          <input  autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Last Name" required>
+        </div>
+         <div class="form__field">
+          
+          <label for="login__username"><svg class="icon">
+              <use xlink:href="#icon-user"></use>
+            </svg><span class="hidden">Username</span></label>
+          <input  autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Phone No." required>
+        </div>
+  
+        <div class="form__field">
+          <label for="login__password"><svg class="icon">
+              <use xlink:href="#icon-lock"></use>
+            </svg><span class="hidden">Password</span></label>
+          <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
+        </div>
+        <div class="form__field">
+          <label for="login__password"><svg class="icon">
+              <use xlink:href="#icon-lock"></use>
+            </svg><span class="hidden">Password</span></label>
+          <input id="login__password" type="password" name="password" class="form__input" placeholder="Confirm Password" required>
+        </div>
+  
+        <div class="form__field">
+          <input type="submit" value="Sign Up">
+        </div>
+  
+      </form>
+      <br>
+  
+      <p class="text--center" style="color: white;">Already part of family? <a onClick="openlogin()" style="text-decoration: none; color:#a1a1a1;" href="#">Sign up now</a> <svg class="icon">
+          
+        </svg></p>
+  
+    </div>
+  
+    <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+      <symbol id="icon-arrow-right" viewBox="0 0 1792 1792">
+        <path d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H245q-52 0-84.5-37.5T128 1024V896q0-53 32.5-90.5T245 768h704L656 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 1792 1792">
+        <path d="M640 768h512V576q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28H416q-40 0-68-28t-28-68V864q0-40 28-68t68-28h32V576q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z" />
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 1792 1792">
+        <path d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z" />
+      </symbol>
+    </svg>
+
+
+
+
+
+
+
+    
+  
+  </body>
+</html>

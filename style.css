@@ -1,0 +1,200 @@
+body{
+   background-color: black !important;
+   font-family: 'Poppins', sans-serif !important;
+   
+}
+.bodyimage{
+   height: 100vh;
+   width: 100vw;
+   background-color: black;
+   background-image: url('background4.jpg');
+   background-size: cover;
+   background-position: center;
+   position: absolute;
+   top: 0;
+   opacity: 0.3;
+   z-index: -99;
+}
+@media only screen and  (max-height: 700px)
+{
+   .bodyimage{
+      height: 700px;
+   }
+}
+#nav1{
+      
+   background-color:rgba(0, 0, 0, 0.062);
+   padding-left: 20px;
+}
+
+.yogposeh1{
+   margin-top: 175px;
+   text-align: center;
+   color: white;
+   cursor: default;
+   font-size: 72px;
+}
+
+
+
+.headingAi{
+   color: rgb(255, 255, 255); 
+   font-family: 'Poppins', sans-serif !important;
+   font-size: 22px !important;
+   margin: 10px 0 0 10px;
+   white-space: nowrap;
+   overflow: hidden;
+   cursor: default;
+   width: 625px;
+   animation: type 5s steps(100, end); 
+}
+@media only screen and  (max-width: 400px)
+{
+   .yogposeh1{
+      font-size: 50px !important;
+   }
+
+   .headingAi{
+      font-size: 16px !important;
+   }
+}
+@media only screen and  (max-width: 320px)
+{
+   .yogposeh1{
+      font-size: 33px !important;
+   }
+   .headingAi{
+      font-size: 14px !important;
+   }
+}
+
+/*set the background colour of div element to black */
+.wrapper {
+  background-color: black;
+ }
+
+ @keyframes type{ 
+  from { 
+       width: 0; 
+       } 
+   }
+
+
+.heading{
+   text-align: center;
+   display: flex;
+   justify-content: center;
+}
+
+
+
+.chooseyoga{
+   text-align: center;
+   color: white;
+   display: block;
+   width: 150px;
+   margin: auto;
+   margin-top: 30px;
+   
+}
+
+.footer{
+   color: white;
+   position: absolute;
+   bottom: 0px;
+   text-align: center;
+   width: 100vw;
+   font-weight: 300;
+   font-size: 12px;
+   background-image: linear-gradient( rgba(0, 0, 0, 0.027),rgba(0, 0, 0, 0.219));
+}
+
+.credit{
+   font-size: 8px !important;
+   margin-top: -15px;
+}
+
+
+
+body {
+   margin: 0;
+   overflow: hidden;
+   width: 100vw;
+   height: 100vh;
+   background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg");
+   background-size: cover;
+   backdrop-filter:  brightness(50%);
+}
+
+canvas {
+   display: block;
+}
+
+#canvas_container {
+   width: 100%;
+   height: 100vh;
+}
+
+
+
+button:hover {
+   background: #ffffff;
+   color: #000000;
+}
+#header-heading{
+   position: absolute;
+   color: white;
+   top: 42vh;
+   text-align: center;
+   margin: auto;
+   width: 100%;
+   font-size: 80px;
+   font-family: 'Rubik Dirt';
+   opacity: 0.6;
+   /* scale: 0.5; */
+   transition-duration: 10s;
+}
+.headerHeading{
+   scale: 1 !important;
+}
+#head-btn{
+   background-color: transparent;
+   position: absolute;
+   position: absolute;
+   top: 65vh;
+   left: 50%;
+   transform: translateX(-50%);
+   border: 1px solid white;
+   border-radius: 5px;
+   font-size: 0.9rem;
+   padding: 0.5rem 0.9em;
+   /* background: #000000; */
+   color: white;
+   -webkit-font-smoothing: antialiased;
+   font-weight: bold;
+   cursor: pointer;
+   /* transition: all 13s; */
+   transition-duration: 13s;
+   opacity: 0;
+}
+.head-btn{
+   opacity: 0.6 !important;
+}
+#myAudio{
+   display: none;
+}
+#head-btn a{
+   color: white;
+   opacity: 0.6;
+   text-decoration: none;
+}
+#head-btn:hover{
+   color: white;
+   opacity: 1;
+}
+.most-popular{
+   color: white;
+   text-align: center;
+   font-size: 2rem;
+   margin-bottom: 20px;
+}

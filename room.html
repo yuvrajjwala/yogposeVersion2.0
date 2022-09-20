@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="room.css">
+   <title>YOGPOSE</title>
+   <script src="index.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+   
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>YOGA ROOM | YOGPOSE</title>
+</head>
+<body style="overflow-y:visible;">
+
+  <div class="yogaroomimage">
+    
+  </div>
+  <audio id="roomaudio" src="roommusic.mp3" loop="loop"></audio>
+
+  <div class="animationarea">
+    <ul class="box-area">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+
+
+
+
+
+
+   <div class="mynavbar" id="nav1">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">YOGPOSE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <style>
+              .navbar-toggler{
+                border: none;
+              }
+              .navbar-toggler:hover{
+                box-shadow: none;
+                border: none;
+              }
+            </style>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Learn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="room.html">Room</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li> -->
+               
+              <!-- </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form> -->
+              </ul>
+              <form class="d-flex">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="login.html">Sign In</a>
+                    </li>
+                   
+                    </ul>
+                </form>
+            </div>
+          </div>
+                    
+
+        </nav>
+        
+
+    </div>
+
+
+      <div class="roomheading">
+          <p>WELCOME TO YOGA ROOM</p>
+          
+          <p style="font-size: 18px;padding: 2px; font-family: poppins;font-weight: 200;">This is Yoga Room Where you will find Peace and your free personal AI trainer</p>
+
+          <form class="d-flex" style="width: 400px;display: block;margin: auto;margin-top: 50px;z-index: 99999 !important;padding: 0px;">
+            <input style="padding: 5px;height:38px" class="form-control me-2" type="search" placeholder="Search Yoga, Problem" aria-label="Search">
+            <button class="me-3" style="border: none;" class="btn btn-outline-success" type="submit"><img id="search" src="./search.png"></button>
+            
+            <style>
+              .btn-outline-success{
+                border: 1px solid white;
+                color: white;
+              }
+              .btn-outline-success:hover{
+                background-color: rgb(55, 142, 212);
+              }
+            </style>
+          </form>
+      </div>
+
+
+
+
+      <div class="most-popular">MOST POPULAR</div>
+    <div class="wrapper">
+      
+      <div class="card">
+        <div class="one"></div>
+          <img src="sub.jpg">
+          <div  class="yoganame">SUKHASANA 
+          <p style="font-size: 16px;font-weight: 300;font-family: poppins;">For Inner Peace</p>
+          </div>
+          <div class="info">
+              <h1>SUKHASANA</h1>
+              <p onselectstart="return false">Sukhasana, easy pose, is a simple cross-legged sitting asana in hatha yoga, sometimes used for meditation<br>Note: Do not perform this pose in case of any severe leg problem. Do not practice this pose if there is any pain in the lower spine or sciatica.</p>
+              <a href="subhasana.html" class="btn">TRY SUKHASANA</a>
+          </div>
+      </div>
+      <!-- Ustrasana -->
+      <div class="card">
+        <div class="one"></div>
+        <img src="TreeYoga.png">
+        <div  class="yoganame">VRIKSHASANA
+        <p style="font-size: 16px;font-weight: 300;font-family: poppins;">For Back Pain</p>
+        </div>
+        <div class="info">
+          <h2>VRIKSHASANA (Tree Pose)</h2>
+          <p onselectstart="return false">Vrikshasana, Vrikshasana, or Camel Pose is a kneeling back-bending asana in modern yoga as exercise.</p>
+          <a href="TreeAashna.html" class="btn">TRY VRIKSHASANA</a>
+          </div>
+      </div>
+
+
+      <div class="card">
+        <div class="one"></div>
+        <img src="utasan.png">
+        <div  class="yoganame">UTTANSANA
+        <p style="font-size: 16px;font-weight: 300;font-family: poppins;">For Balley Fat</p>
+        </div>
+        <div class="info">
+          <h1>UTTANSANA</h1>
+          <p onselectstart="return false">Uttanasana or Standing Forward Bend, with variants such as Padahastasana where the toes are grasped, is a standing forward bending asana in modern yoga as exercise.</p>
+          <a href="#" class="btn">TRY UTTANSANA</a>
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="one"></div>
+        <img src="sub.jpg">
+        <div  class="yoganame">SUKHASANA 
+        <p style="font-size: 16px;font-weight: 300;font-family: poppins;">For Inner Peace</p>
+        </div>
+        <div class="info">
+            <h1>SUKHASANA</h1>
+            <p onselectstart="return false">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+            <a href="#" class="btn">TRY SUBHASANA </a>
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="one"></div>
+        <img src="utk.jpg">
+        <div  class="yoganame">SUKHASANA 
+        <p style="font-size: 16px;font-weight: 300;font-family: poppins;">For Inner Peace</p>
+        </div>
+        <div class="info">
+          <h1>UTTANSANA</h1>
+          <p onselectstart="return false">Uttanasana or Standing Forward Bend, with variants such as Padahastasana where the toes are grasped, is a standing forward bending asana in modern yoga as exercise.</p>
+          <a href="#" class="btn">TRY UTTANSANA</a>
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="one"></div>
+        <img src="foldhand.jpg">
+        <div  class="yoganame">FOLD HAND
+        <p style="font-size: 16px;font-weight: 300;font-family: poppins;">For Inner Peace</p>
+        </div>
+        <div class="info">
+          <h1>FOLD HAND</h1>
+          <p onselectstart="return false">Fold Hand is exercise for elbow.</p>
+          <a href="#" class="btn">TRY FOLD HAND</a>
+      </div>
+          
+    </div>
+
+    <div class="card">
+      <div class="one"></div>
+        <img src="sub.jpg">
+        <div  class="yoganame">SUKHASANA
+        <p style="font-size: 16px;font-weight: 300;font-family: poppins;">For Inner Peace</p>
+        </div>
+        <div class="info">
+          <h1>SUKHASANA</h1>
+          <p>Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+          <a href="#" class="btn">TRY SUBHASANA </a>
+      </div>
+    </div>
+      
+      <div class="card">
+        <div class="one"></div>
+        <img src="foldhand.jpg">
+        <div  class="yoganame">FOLD HAND
+        <p style="font-size: 16px;font-weight: 300;font-family: poppins;">For Elbow and Wrist</p>
+        </div>
+        <div class="info">
+          <h1>FOLD HAND</h1>
+          <p>Fold Hand is exercise for elbow.</p>
+          <a href="#" class="btn">TRY FOLD HAND</a>
+      </div>
+      </div>
+  </div>
+
+
+
+
+
+  
+
+<!-- Site footer -->
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>About</h6>
+        <p class="text-justify"></p>YogPose guides newbies to learn and practice yoga postures in the correct way and experienced people to track their progress. This Web app will benefit a lot of people ranging from toddlers to senior citizens. The user can choose to play a soothing calm music from the app itself for better concentration and motivation. Yoga can be added to one's daily regime so that it can help against common body aches.</div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li><a href="#">Meditation</a></li>
+          <li><a href="#">Back Pain</a></li>
+          <li><a href="#">Joint Pain</a></li>
+          <li><a href="#">Belly Fat</a></li>
+          <li><a href="#">Cardic Yoga</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="room.html">Yoga Rooms</a></li>
+          <li><a href="subhasana.html">Try Yoga</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <!-- <li><a href="#">Sitemap</a></li> -->
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+     <a href="#">YOGPOSE</a>
+     <!-- <p style="font-size: 12px;" class="copyright-text">Website by  -->
+      <!-- <a href="https://www.linkedin.com/in/yuvraj-jwala/">Yuvraj Jwala</a>. -->
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a style="text-decoration: none;" class="facebook" href="#"><strong >f</strong><i class="fa fa-facebook"></i></a></li>
+          <!-- <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
+          <li><a style="text-decoration: none;" class="linkedin" href="#"><strong style="text-decoration: none;">in</strong><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
